@@ -8,15 +8,12 @@ using namespace std;
 int nFactorial (int n){
     // where to stop the function
     if(n == 0){
-        return;
+        return 1;
     }
-
-    // to find the factorial 
-    // - Take the current number n.
-    // - Multiply it by the factorial of n - 1.
-    // - Call the same function again.
-
- return n * nFactorial(n-1);
+    int smallAns = nFactorial(n-1);
+     int ans = n * smallAns;
+     return ans;
+  
 }
 
 int main(){
@@ -26,6 +23,6 @@ int main(){
     int n;
     cin >> n;
 
-     nFactorial(n);
-    return 0;
+     cout << nFactorial(n)<<endl;
+    
 }
